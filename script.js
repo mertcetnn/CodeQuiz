@@ -44,46 +44,42 @@ var correct5 = [[2]]
 var correct5 = true
 if (correct5 === true) { } else { false };
 
+// start to declares and selectors
+var score =0;
+var questions=0;
+
+
+var countDown=document.querySelector("#countDown")
+var greeting=document.querySelector("#greeting")
+var wrapper =document.querySelector("#wrapper")
+var startQuiz =document.querySelector("#startquiz")
+//countdown collectors
+var timeLeft=75;
+var holdTime=0;
+var penaltyPoint=10;
+//creat ul elements with 
+ var createUl=document.createElement("ul");
+ //timer display set up
+timer.addEventListener("click",function(){
+   // if timer equal to "0"
+    if (holdTime===0){
+        holdTime=setInterval(function(){
+timeLeft --;
+countDown.textContent=timeLeft+"Left";
+//if timer equal to "0"
+if(timeLeft<= 0){
+    clearInterval(holdTime);
+    allDone();
+countDown.textContent="Good luck for results"
+}   
+ },1000)
+
+    }
+    render(questions);
+
+});
 
     
-
-// Declared variables
-var score = 0;
-var questionIndex = 0;
-
-// Start working code 
-// Declared variables
-var currentTime = document.querySelector("#currentTime");
-var timer = document.querySelector("#startTime");
-var questionsDiv = document.querySelector("#questionsDiv");
-var wrapper = document.querySelector("#wrapper");
-
-// Seconds left is 15 seconds per question:
-var secondsLeft = 76;
-// Holds interval time
-var holdInterval = 0;
-// Holds penalty time
-var penalty = 10;
-// Creates new element
-var ulCreate = document.createElement("ul");
-
-// Triggers timer on button, shows user a display on the screen
-timer.addEventListener("click", function () {
-    // We are checking zero because its originally set to zero
-    if (holdInterval === 0) {
-        holdInterval = setInterval(function () {
-            secondsLeft--;
-            currentTime.textContent = "Time: " + secondsLeft;
-
-            if (secondsLeft <= 0) {
-                clearInterval(holdInterval);
-                allDone();
-                currentTime.textContent = "Time's up!";
-            }
-        }, 1000);
-    }
-    render(questionIndex);
-});
 
 // Renders questions and choices to page: 
 function render(questionIndex) {
