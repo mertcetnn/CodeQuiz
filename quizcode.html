@@ -5,29 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>QuizCode</title>
+    <title>Quiz Code</title>
 </head>
 <body>
-    <div class="highscores">
-    <a href="#highscores.html" >High Scores</a>
-    </div>
-    <div class="timer"></div>
-        
+    <div id="wrapper">
+    <div id="highscore"><a href="#highscores.html" >High Scores</a></div>
+   <div>
+    <p id="countDown" ></p>
+   </div>
     </div>
 
-    <div class="greeting">
+
+   <section class="first-page">
+    <div id="greeting">
 
     <h1>Coding Quiz Challange</h1>
     <p>Try to answer the following code-related questions within the time limit. Every mistake will have penalties.</p>
-    <p>Not: Every mistake will decrease 12 second from your time.</p></div>
+    <p>Not: Every mistake will decrease 12 second from your time.</p>
+        
+    </div>
     
-<button class="startquiz" >Start Quiz</button>
+<button id="startquiz">Start Quiz</button>
 <ul class="questions">
 
     
 </ul>
+</section>
 
 
-    <script src="./script.js"></script>
+   <script src="./script.js">
+    
+   </script>
 </body>
 </html>
