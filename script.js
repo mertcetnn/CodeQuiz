@@ -31,38 +31,46 @@ var myquestions = [
 // start to declares and selectors
 var i=0;
 var score = 0;
-var questionIndex=0;
+var myquestionIndex=0;
 
 var wrapper=document.querySelector("#wrapper")
 var currentTime=document.querySelector("#currentTime")
 var timer =document.querySelector("#startTime")
-var questionDiv=document.querySelector("questionDiv")
+var questionsDiv=document.querySelector("questionDiv")
 //countdown collectors
 var timeLeft = 76;
 var holdTime = 0;
 var penaltyPoint = 10;
 //creat ul elements with 
 var createUl = document.createElement("ul");
-//timer display set up
-startquiz.addEventListener("click", function () {
+//timer display set up and
     //it suppouse to start timer
     // if timer equal to "0"
-    if (holdTime === 0) {
-        holdTime = setInterval(function () {
-            timeLeft--;
-            countDown.textContent = " Time:" + timeLeft;
-            //if timer equal to "0"
-            if (timeLeft <= 0) {
-                clearInterval(holdTime);
-                allDone();
-                countDown.textContent = "Good luck for results"
-            }
-        }, 1000)
+    
+timer.addEventListener("click",function(){
+if (holdTime===0){ 
+    holdTime=setInterval(function(){
+        timeLeft--;
+        currentTime.textContent="Time:" +timeLeft;
+        if (timeLeft<=0){
+            clearInterval(holdTime);
+            currentTime.textContent="Time is up!";
+         }
+    },1000);
+} render (myquestionIndex)
+});
+function render(questionIndex){
+    questionsDiv.innerHTML='';
+    createUl.innerHTML='';
+    for (var i=0; i<myquestions.length; i++){
+        var uQuestions=myquestions[myquestionIndex].title
+        var uChoice=myquestions[myquestionIndex].choices
+        questionsDiv.textContent=uQuestions;
 
     }
 
+}
 
-});
 
 
 
