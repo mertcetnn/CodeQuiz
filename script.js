@@ -1,6 +1,6 @@
 
  //questions and answers
-const myquestions = [
+var myquestions = [
     {
         title: "Commonly used data types DO NOT include:",
         choices: ["strings", "booleans", "alerts", "numbers"],
@@ -27,33 +27,34 @@ const myquestions = [
         answer: "console log"
     }
 ]
-var question=$("question");
-var quizContainer=$("quiz-conteiner");
-var scorecard=$("scorecard");
-var option0=$("option0");
-var option1=$("option1");
-var option2=$("option2");
-var option3=$("option3");
-var option4=$("option4");
-var next =document.querySelectorAll("next");
-var points=$("score");
-var span=document.querySelectorAll("span")
+var question=document.getElementById("question");
+var quizContainer=document.getElementById('quiz-conteiner');
+var scorecard=document.getElementById('scorecard');
+var option0=document.getElementById('option0');
+var option1=document.getElementById('option1');
+var option2=document.getElementById('option2');
+var option3=document.getElementById('option3');
+var option4=document.getElementById('option4');
+var next =document.querySelectorAll('next');
+var points=document.getElementById('score');
+var span=document.querySelectorAll('span')
 
 // start to declares and selectors
 var i=0;
 var score = 0;
-myquestions = 0;
+
 function displayQuestion(){
     for (var a=0;a<span.length;a++){
         span[a].style.background="none";
-        question.innerHTML="Q"+(i+1)+""+myquestions[i].question;
+        question.innerHTML='Q'+(i+1)+''+myquestions[i].question;
         option0.innerHTML=myquestions[i].option[0];
         option1.innerHTML=myquestions[i].option[1];
         option2.innerHTML=myquestions[i].option[2];
         option3.innerHTML=myquestions[i].option[3];
         option4.innerHTML=myquestions[i].option[4];
-        statusbar.innerHTML="Question"+'' +(i+1)+''+myquestions.length;
+        stat.innerHTML="Question"+'' +(i+1)+''+"of"+''+myquestions.length;
     }
+    displayQuestion();
 }
 
 

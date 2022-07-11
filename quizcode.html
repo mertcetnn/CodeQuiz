@@ -1,59 +1,38 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Code Quiz</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+
+    <title>Coding Quiz</title>
 </head>
 
 <body>
-    <div id="highscore"><a href="#highscores.html">High Scores</a></div>
-     <div><p id="countDown"></p></div>
-
-<!--quiz conteiner-->
-    <section class="first-page">
-        <!--question conteiner-->
-        <div id="questionconteiner">  
-
-            <h1>Coding Quiz Challange</h1>
-            <p>Try to answer the following code-related questions within the time limit. Every mistake will have
-                penalties.</p>
-            <p>Not: Every mistake will decrease 10 second from your time.</p>
-
-        <div class="questions">
-            <h2 id="question"></h2>
-            <ol type="1" >
-                <li class="option"><span id="option0"></span></li>
-                <li class="option"><span id="option1"></span></li>
-                <li class="option"><span id="option2"></span></li>
-                <li class="option"><span id="option3"></span></li>
-                <li class="option"><span id="option4"></span></li>
-            </ol>
-            <h4 id="stat"></h4>
-        </div>
-        <div class="buttons" >
-            <button type="button" id="startquiz">Start Quiz</button>
-  
-        </div>
-        <!--Answers-->
-        <div id="myquestions">
-            <ol type="a">
-                <button type="button" id="next-questoin">Next Question</button>
-            </ol>
+    <!-- Link to highscores -->
+    <a href="./highscores.html">View Highscores</a>
+    <div id="wrapper">
+        <!-- Timer Div -->
+        <div id="currentTime"></div>
+       
+        <div id="questionsDiv">
+            <h1>Coding Quiz Challenge</h1>
+            <p>Try to answer the following code-related questions within the time limit. Please note incorrect
+                answers will decrease your score/time by ten seconds!</p>
+            <ul id="choicesUl"></ul>
+    
+            <button id="startTime">Start Quiz</button>
         </div>
 
-        </div>
+    </div>
 
 
-    </section>
+    <script src="assets/js/script.js"></script>
 
 
-    <script src="./script.js">
-
-    </script>
 </body>
 
 </html>

@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text.css" href="index.html">
+    <link rel="stylesheet" type="text.css" href="index.html">
     <title>High Scores</title>
 </head>
-<body> 
-  <div><p id="countDown"></p></div>
 
-  <!--quiz conteiner-->
-      <section class="first-page">
-          <!--question conteiner-->
-          <div id="scoreboard">  
-  
-          <div id="scoreboard">
-         
-              <h2 id="score-title">Your Score</h2>
-              <h2 id="score"></h2>
+<body>
+    <div>
+        <p id="countDown"></p>
+    </div>
 
-          </div>
-          <div class="score- btns" >
-              <button type="button" id="startquiz">Back To Quiz</button>
-              <button type="button" id="startquiz ">Check Answers</button>
-    
-          </div>
-          </div>
-  
-  
-      </section>
-  
-    
+    <!--quiz conteiner-->
+    <section class="first-page">
+        <!--question conteiner-->
+        <div id="scoreboard">
+
+            <div id="scoreboard">
+
+                <h2 id="score-title">Your Score</h2>
+                <h2 id="score"></h2>
+                <div class="score- btns">
+                    <button type="button" id="score-btn" onclick="backToQuiz()">Back to Quiz</button>
+                    <button type="button" id="check-answer" onclick="checkAnswer()">Check Answers</button>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+
 </body>
+
 </html>
