@@ -6,8 +6,7 @@ const resultsConteiner=document.getElementById("#results");
 function myQuiz(){}
 function showResults(){}
 
-myQuiz();
- submitButton.addEventListener('click',showResults);
+
 
  //questions and answers
 const myqestions = [
@@ -72,24 +71,10 @@ startquiz.addEventListener("click", function () {
 
 });
 
-function buildQuiz(){
-const output=[];
-myqestions.forEach((currentQuestion,questionsNumber)=>{
-    const answers=[];
-    for(letter in currentQuestion.answers){
-        answers.push(
-            <label>
-                <input type="radio" name="question${questionNumber}"
-            </label>
-        )
-
-    }
+      
 
 
-}
 
-
-}
 
 
 
