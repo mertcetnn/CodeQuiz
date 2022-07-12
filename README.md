@@ -19,5 +19,5 @@
 <p>In the process.</p>
 
 
-![step1](./assets/img/WhatsApp%20Image%202022-07-07%20at%2012.45.36%20AM.jpeg ){height=400px width=500px};
-![step2](./assets/img/WhatsApp%20Image%202022-07-07%20at%2012.45.37%20AM.jpeg){height=400px width=500px};
+<img src="./1.jpeg" width="200">
+<img src="./2.jpeg" width="200">
