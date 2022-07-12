@@ -1,5 +1,6 @@
 <h1>Code Quiz</h1>
 <h2>Description<h2>
+
 <ol>
 <li>GIVEN I am taking a code quiz</li>
 <li>WHEN I click the start button</li>
@@ -14,6 +15,9 @@
 <li>HEN I can save my initials and my score</li>
 </ol>
 
+<h2>Project Status</h2>
+<h3>In the process.</h3>
 
-![step1](./assets/img/WhatsApp%20Image%202022-07-07%20at%2012.45.36%20AM.jpeg);
-![step2](./assets/img/WhatsApp%20Image%202022-07-07%20at%2012.45.37%20AM.jpeg);
+
+![step1](./assets/img/WhatsApp%20Image%202022-07-07%20at%2012.45.36%20AM.jpeg =250x250 );
+![step2](./assets/img/WhatsApp%20Image%202022-07-07%20at%2012.45.37%20AM.jpeg =250x250);
