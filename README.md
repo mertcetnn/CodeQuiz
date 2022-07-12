@@ -19,5 +19,5 @@
 <p>In the process.</p>
 
 
-<img src="./assets/1.jpeg" width="200">
-<img src="./assets/2.jpeg" width="200">
+![step1](./assets/img/1.jpeg);
+![step2](././assets/img/2.jpeg);
