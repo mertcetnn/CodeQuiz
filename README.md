@@ -1,4 +1,5 @@
 <h1>Code Quiz</h1>
+<h2>Description<h2>
 <ol>
 <li>GIVEN I am taking a code quiz</li>
 <li>WHEN I click the start button</li>
@@ -12,5 +13,4 @@
 <li>WHEN the game is over</li>
 <li>HEN I can save my initials and my score</li>
 </ol>
-!(./assets/img/WhatsApp%20Image%202022-07-07%20at%2012.45.36%20AM.jpeg)
-!(./assets/img/WhatsApp%20Image%202022-07-07%20at%2012.45.37%20AM.jpeg)
+![alt text](./assets/img/WhatsApp Image 2022-07-07 at 12.45.36 AM.jpeg)
