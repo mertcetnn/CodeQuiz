@@ -16,7 +16,7 @@
 </ol>
 
 <h2>Project Status</h2>
-<h3>In the process.</h3>
+<p>In the process.</p>
 
 
 ![step1](./assets/img/WhatsApp%20Image%202022-07-07%20at%2012.45.36%20AM.jpeg =250x250 );
