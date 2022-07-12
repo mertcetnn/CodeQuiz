@@ -1,49 +1,48 @@
 
- var containerQuestionEl = document.getElementById("question-container");
- var containerStartEl = document.getElementById("starter-container");
- var containerEndEl = document.getElementById("end-container")
- var containerScoreEl = document.getElementById("score-banner")
- var formInitials = document.getElementById("initials-form")
- var containerHighScoresEl = document.getElementById("high-score-container")
- var ViewHighScoreEl = document.getElementById("view-high-scores")
- var listHighScoreEl = document.getElementById("high-score-list")
- var correctEl = document.getElementById("correct")
- var wrongEl = document.getElementById("wrong")
-// buttons
-      var btnStartEl = document.querySelector("#start-game");
-      var btnGoBackEl = document.querySelector("#go-back")
-      var btnClearScoresEl = document.querySelector("#clear-high-scores")
-      //questions/answers element
-      var questionEl = document.getElementById("question")
-      var answerbuttonsEl = document.getElementById("answer-buttons")
-      var timerEl = document.querySelector("#timer");
-      var score = 0;
-      var timeleft;
-      var gameover
-      timerEl.innerText = 0;
+ var questions = [
+  {
+    title: "Commonly used data types DO NOT include:",
+    choices: ["strings", "booleans", "alerts", "numbers"],
+    answer: "alerts",
+  },
+  {
+    title: "The condition in an if / else statement is enclosed within ____.",
+    choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
+    answer: "parentheses",
+  },
+  {
+    title: "Arrays in Javascript can be used to store ____.",
+    choices: [
+      "numbers and strings",
+      "other arrays",
+      "booleans",
+      "all of the above",
+    ],
+    answer: "all of the above",
+  },
+  {
+    title:
+      "String values must be enclosed within ____ when being assigned to variables.",
+    choices: ["commas", "curly brackets", "quotes", "parenthesis"],
+    answer: "quotes",
+  },
+  {
+    title:
+      "A very useful tool for used during development and debugging for printing content to the debugger is:",
+    choices: ["Javascript", "terminal / bash", "for loops", "console log"],
+    answer: "console log",
+  },
+];
 
+var score = 0;
+var questionList = 0;
+var currentTime = document.querySelector("#currentTime");
+var timer = document.querySelector("#startTime");
+var questionsDiv = document.querySelector("#questionsDiv");
+var wrapper = document.querySelector("#wrapper");
 
-    
-      var HighScores=[];
-
-
-      var arrayShuffledQuestions=[];
-      var QuestionIndez=0;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//Creating the Timer
+var secondsLeft = 60;
+var holdInterval = 0;
+var penalty = 5;
+var ulCreate = document.createElement("ul");
