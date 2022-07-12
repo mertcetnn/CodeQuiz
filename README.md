@@ -19,5 +19,5 @@
 <p>In the process.</p>
 
 
-<img src="./1.jpeg" width="200">
-<img src="./2.jpeg" width="200">
+<img src="./assets/1.jpeg" width="200">
+<img src="./assets/2.jpeg" width="200">
