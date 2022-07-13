@@ -20,4 +20,4 @@
 
 
 ![step1](./assets/img/1.jpeg);
-![step2](././assets/img/2.jpeg);
+![step2](./assets/img/2.jpeg);

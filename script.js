@@ -1,5 +1,5 @@
 
- var questions = [
+var questions = [
   {
     title: "Commonly used data types DO NOT include:",
     choices: ["strings", "booleans", "alerts", "numbers"],
@@ -40,12 +40,12 @@ var currentTime = document.querySelector("#currentTime");
 var timer = document.querySelector("#startTime");
 var questionsDiv = document.querySelector("#questionsDiv");
 var wrapper = document.querySelector("#wrapper");
-
+var checkAnswer = document.querySelector("#answerCheck")
 //Creating the Timer
 var secondsLeft = 75;
 var holdInterval = 0;
 var penalty = 5;
-var ulCreate = document.createElement("ul");
+
 
 timer.addEventListener("click", function () {
   if (holdInterval === 0) {
@@ -55,26 +55,65 @@ timer.addEventListener("click", function () {
 
       if (secondsLeft <= 0) {
         clearInterval(holdInterval);
-        allDone();
         currentTime.textContent = "Time's up!";
       }
     }, 1000);
   }
   render(questionList);
 });
+var ulCreate = document.createElement("ul");
 function render(questionList) {
   questionsDiv.innerHTML = "";
   ulCreate.innerHTML = "";
   for (var i = 0; i < questions.length; i++) {
     var userQuestion = questions[questionList].title;
     var userChoices = questions[questionList].choices;
+    var trueA = questions[questionList].answer
     questionsDiv.textContent = userQuestion;
+
+
   }
+
   userChoices.forEach(function (newItem) {
     var listItem = document.createElement("li");
     listItem.textContent = newItem;
     questionsDiv.appendChild(ulCreate);
     ulCreate.appendChild(listItem);
-    listItem.addEventListener("click", compare);
+    listItem.addEventListener("click", function (event) {
+
+
+      if (event.target.textContent === questions[questionList].answer) {
+        var correct = document.createElement("h2")
+        correct.textContent = "Good job !correct!!!"
+        questionsDiv.appendChild(checkAnswer);
+        checkAnswer.appendChild(correct)
+        correct.setAttribute("class", "comments")
+        return correct;
+       
+
+
+      } else {
+        var wrong = document.createElement("h2")
+        wrong.textContent = "Wrong, Next time!"
+        questionsDiv.appendChild(checkAnswer)
+        checkAnswer.appendChild(wrong)
+        wrong.setAttribute("class", "comments")
+        secondsLeft = secondsLeft - penalty;
+        return wrong;
+
+      } 
+     if (trueA==true && false){listItem.textContent = newItem;
+      questionsDiv.appendChild(ulCreate);
+      ulCreate.appendChild(listItem);}
+  
+
+
+
+
+    }
+    
+    
+    );
   })
+
 }
