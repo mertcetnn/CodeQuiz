@@ -19,5 +19,8 @@
 <p>In the process.</p>
 
 
-![step1](./assets/img/1.jpeg);
-![step2](./assets/img/2.jpeg);
+![step1](./assets/img/first.png);
+![step2](./assets/img/second.png);
+![step2](./assets/img/main%20page.png);
+![step2](./assets/img/questions.png);
+![step2](./assets/img/GREAT%20JOB.png);

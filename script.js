@@ -40,7 +40,8 @@ var currentTime = document.querySelector("#currentTime");
 var timer = document.querySelector("#startTime");
 var questionsDiv = document.querySelector("#questionsDiv");
 var wrapper = document.querySelector("#wrapper");
-var checkAnswer = document.querySelector("#answerCheck")
+var checkAnswer = document.querySelector("#answerCheck");
+var choicesUl=document.querySelector("#choicesUl");
 //Creating the Timer
 var secondsLeft = 75;
 var holdInterval = 0;
@@ -89,7 +90,7 @@ function render(questionList) {
         checkAnswer.appendChild(correct)
         correct.setAttribute("class", "comments")
         return correct;
-       
+
 
 
       } else {
@@ -100,20 +101,10 @@ function render(questionList) {
         wrong.setAttribute("class", "comments")
         secondsLeft = secondsLeft - penalty;
         return wrong;
+          }  
+        }
+        ) ;
 
-      } 
-     if (trueA==true && false){listItem.textContent = newItem;
-      questionsDiv.appendChild(ulCreate);
-      ulCreate.appendChild(listItem);}
-  
-
-
-
-
-    }
-    
-    
-    );
-  })
-
-}
+        
+      })}
+     
