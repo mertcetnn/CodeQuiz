@@ -41,11 +41,12 @@ var timer = document.querySelector("#startTime");
 var questionsDiv = document.querySelector("#questionsDiv");
 var wrapper = document.querySelector("#wrapper");
 var checkAnswer = document.querySelector("#answerCheck");
-var choicesUl=document.querySelector("#choicesUl");
+var choicesUl = document.querySelector("#choicesUl");
 //Creating the Timer
 var secondsLeft = 75;
 var holdInterval = 0;
 var penalty = 5;
+var point = 12
 
 
 timer.addEventListener("click", function () {
@@ -60,39 +61,44 @@ timer.addEventListener("click", function () {
       }
     }, 1000);
   }
-  render(questionList);
+  render();
 });
+// creat Ul and place questions in it
 var ulCreate = document.createElement("ul");
-function render(questionList) {
+
+function render() {
+  
   questionsDiv.innerHTML = "";
   ulCreate.innerHTML = "";
-  for (var i = 0; i < questions.length; i++) {
-    var userQuestion = questions[questionList].title;
-    var userChoices = questions[questionList].choices;
-    var trueA = questions[questionList].answer
-    questionsDiv.textContent = userQuestion;
+  
+  var userQuestion = questions[questionList].title;
+  var userChoices = questions[questionList].choices;
+  var trueA = questions[questionList].answer
+  questionsDiv.textContent = userQuestion;
 
 
-  }
-
+  // 
+  //Giving values to userchoices
+  
   userChoices.forEach(function (newItem) {
     var listItem = document.createElement("li");
     listItem.textContent = newItem;
     questionsDiv.appendChild(ulCreate);
     ulCreate.appendChild(listItem);
+  
     listItem.addEventListener("click", function (event) {
-
-
+      // correct answer text  will pop up if answer correct
       if (event.target.textContent === questions[questionList].answer) {
         var correct = document.createElement("h2")
         correct.textContent = "Good job !correct!!!"
         questionsDiv.appendChild(checkAnswer);
         checkAnswer.appendChild(correct)
         correct.setAttribute("class", "comments")
-        return correct;
-
-
-
+        score = score + point;
+        console.log(score)
+  
+  
+        //wrong anwswer text will pop up if answer incorrect
       } else {
         var wrong = document.createElement("h2")
         wrong.textContent = "Wrong, Next time!"
@@ -100,11 +106,17 @@ function render(questionList) {
         checkAnswer.appendChild(wrong)
         wrong.setAttribute("class", "comments")
         secondsLeft = secondsLeft - penalty;
-        return wrong;
-          }  
-        }
-        ) ;
-
-        
-      })}
+       
+      }
+      questionList++ 
+    
      
+     render();
+    });
+  
+  
+  
+  
+   } )
+}
+
